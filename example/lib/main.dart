@@ -2,13 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:nil/nil.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const _MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({
-    Key? key,
-  }) : super(key: key);
+class _MyApp extends StatelessWidget {
+  const _MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,13 +15,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(),
+      home: const _MyHomePage(),
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({
+class _MyHomePage extends StatelessWidget {
+  const _MyHomePage({
     Key? key,
   }) : super(key: key);
 
@@ -35,7 +33,7 @@ class MyHomePage extends StatelessWidget {
         child: Builder(
           builder: (_) {
             if (DateTime.now().minute.isEven) {
-              return const MyWidget();
+              return const _MyWidget();
             } else {
               return nil;
             }
@@ -46,8 +44,8 @@ class MyHomePage extends StatelessWidget {
   }
 }
 
-class MyWidget extends StatelessWidget {
-  const MyWidget({
+class _MyWidget extends StatelessWidget {
+  const _MyWidget({
     Key? key,
   }) : super(key: key);
 
